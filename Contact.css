@@ -1,0 +1,276 @@
+/* ───────── Reset & Base Styles ───────── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  position: relative;
+  background: #fff;
+  color: #05326e;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ───────── Navbar ───────── */
+.navbar {
+  background: #a2eeff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 4%;
+  flex-wrap: wrap;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #05326e;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #05326e;
+  font-weight: 501;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+.auth-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.45rem 1.25rem;
+  border-radius: 0.4rem;
+  border: 2px solid #05326e;
+  background: #05326e;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+  text-align: center;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+/* ───────── Menu Toggle ───────── */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #05326e;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ───────── Contact Section ───────── */
+.contact-section {
+  padding: 3rem 4%;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.contact-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-left h2 {
+  font-size: 2rem;
+  color: #05326e;
+  margin-bottom: 0.5rem;
+}
+
+.contact-left p {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.contact-left form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-left input,
+.contact-left textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.contact-left input:focus,
+.contact-left textarea:focus {
+  border-color: #51a7ff;
+  outline: none;
+}
+
+/* ───────── Right Column ───────── */
+.contact-right {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-right img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-info p {
+  font-size: 1rem;
+}
+
+.contact-info i {
+  margin-right: 8px;
+}
+
+/* ───────── Accessibility Focus ───────── */
+a:focus,
+button:focus {
+  outline: 2px dashed #51a7ff;
+  outline-offset: 4px;
+}
+
+/* ───────── Responsive ───────── */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-self: flex-end;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    background: #a2eeff;
+    padding: 1rem 0;
+    gap: 1rem;
+    border-top: 1px solid #90d8e6;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .auth-actions {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem 0;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-left,
+  .contact-right {
+    width: 100%;
+  }
+
+  .contact-info {
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+
+/* ───────── Aesthetic Background Blobs ───────── */
+.bg-blobs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-20px) scale(1.02); }
+  100% { transform: translateY(0px) scale(1); }
+}
+
+.bg-blobs circle:first-child {
+  animation: float 6s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.bg-blobs circle:last-child {
+  animation: float 8s ease-in-out infinite;
+  transform-origin: center;
+}

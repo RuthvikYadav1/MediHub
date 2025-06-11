@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Medi-Link Hub</title>
+  <link rel="stylesheet" href="contact.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ─────── Background Blobs ─────── -->
+  <svg class="bg-blobs" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="blobGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#a2eeff" />
+        <stop offset="100%" stop-color="#53b2fc" />
+      </linearGradient>
+    </defs>
+    <circle cx="150" cy="200" r="150" fill="url(#blobGradient)" opacity="0.2"/>
+    <circle cx="700" cy="100" r="100" fill="url(#blobGradient)" opacity="0.15"/>
+  </svg>
+
+  <!-- ─────── Navbar ─────── -->
+  <header class="navbar">
+    <div class="logo">Medi-Link Hub</div>
+
+    <button class="menu-toggle" aria-label="Toggle navigation">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Aboutus2.html">About Us</a></li>
+      <li><a href="exp.html">Services</a></li>
+      <li><a href="Contact.html">Contact Us</a></li>
+    </ul>
+
+    <div class="auth-actions">
+      <button class="btn" onclick="window.location.href='#'">Sign Up</button>
+      <button class="btn primary" onclick="window.location.href='login.html'">Login</button>
+    </div>
+  </header>
+
+  <!-- ─────── Contact Section ─────── -->
+  <section class="contact-section">
+    <div class="contact-container">
+      <div class="contact-left">
+        <h2>Contact Us</h2>
+        <p>Fill out the form below or reach us via email or phone.</p>
+
+        <form>
+          <input type="text" placeholder="Name" required />
+          <input type="email" placeholder="Email" required />
+          <textarea placeholder="Message" rows="5" required></textarea>
+          <button type="submit" class="btn primary">Send Message</button>
+        </form>
+      </div>
+
+      <div class="contact-right">
+        <img src="/images/Support agent.png" alt="Support agent" />
+        <div class="contact-info">
+          <p><i class="fas fa-phone"></i> 123-456-7890</p>
+          <p><i class="fas fa-envelope"></i> medihub@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const menuBtn = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuBtn.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

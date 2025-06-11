@@ -1,0 +1,289 @@
+/* ───────── Reset & Base Styles ───────── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #05326e;
+  line-height: 1.6;
+}
+
+/* ───────── Navigation Bar ───────── */
+.navbar {
+  background: #a2eeff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 4%;
+  flex-wrap: wrap;
+  gap: 1rem;
+  position: relative;
+  transition: height 0.3s ease;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #05326e;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #05326e;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+.auth-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.45rem 1.25rem;
+  border-radius: 0.4rem;
+  border: 2px solid #05326e;
+  background: #05326e;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+  text-align: center;
+}
+
+.btn.primary {
+  background: #05326e;
+  color: #ffffff;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+/* ───────── Menu Toggle Styles ───────── */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #05326e;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ───────── Hero Section ───────── */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 4rem 4%;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  max-width: 30rem;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.cta-btn {
+  background: #05326e;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.cta-btn:hover {
+  opacity: 0.9;
+}
+
+/* ───────── Hero Image ───────── */
+.hero-img {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: -40px; /* Pull image slightly left */
+}
+
+.hero-img img {
+  width: 400px;
+  max-width: 100%;
+}
+
+/* ───────── Feature Boxes ───────── */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  flex-wrap: wrap;
+  padding: 2rem 4% 4rem;
+}
+
+.feature-box {
+  width: 260px;
+  height: 230px;
+  border: 3px solid #51a7ff;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(81, 167, 255, 0.2);
+}
+
+.feature-box i {
+  font-size: 3rem;
+  margin-bottom: 1.25rem;
+}
+
+.feature-box span {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* ───────── Accessibility Focus Styles ───────── */
+a:focus,
+button:focus {
+  outline: 2px dashed #51a7ff;
+  outline-offset: 4px;
+}
+
+/* ───────── Responsive ───────── */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem 4%;
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-self: flex-end;
+    margin-top: -2.5rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    background: #a2eeff;
+    padding: 1rem 0;
+    gap: 1rem;
+    border-top: 1px solid #90d8e6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 0.75rem 0;
+    font-size: 1.1rem;
+  }
+
+  .auth-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-img {
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .cta-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-box {
+    width: 90%;
+    height: auto;
+    padding: 1.5rem;
+  }
+}

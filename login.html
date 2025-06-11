@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medi-Link Hub | Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+<div class="floating-shape shape1"></div>
+<div class="floating-shape shape2"></div>
+<div class="floating-shape shape3"></div>
+
+  <!-- ─────── Navbar ─────── -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">Medi-Link Hub</div>
+
+      <!-- Hamburger Toggle -->
+      <button class="menu-toggle" aria-label="Toggle navigation" id="menuToggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Aboutus2.html">About Us</a></li>
+        <li><a href="exp.html">Services</a></li>
+        <li><a href="Contact.html">Contact Us</a></li>
+      </ul>
+
+      <!-- Auth Buttons as Links -->
+      <div class="auth-buttons">
+        <a href="#" class="btn sign-in">Sign Up</a>
+        <a href="login.html" class="btn login">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ─────── Login Form ─────── -->
+  <div class="form-container">
+    <form class="login-form">
+      <h2>Login</h2>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="Enter your email" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter your password" required />
+
+      <div class="forgot-password">
+        <a href="#">Forgot Password?</a>
+      </div>
+
+      <button type="submit" class="btn login">Login</button>
+    </form>
+  </div>
+
+  <!-- ─────── JavaScript ─────── -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuToggle.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

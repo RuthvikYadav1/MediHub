@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medi-Link Hub | Home</title>
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Medi-Link Hub</div>
+
+    <button class="menu-toggle" aria-label="Toggle navigation">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Aboutus2.html">About Us</a></li>
+      <li><a href="exp.html">Services</a></li>
+      <li><a href="Contact.html">Contact Us</a></li>
+    </ul>
+
+    <div class="auth-actions">
+      <button class="btn" onclick="window.location.href='#'">Sign Up</button>
+      <button class="btn primary" onclick="window.location.href='login.html'">Login</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Medi-Link Hub</h1>
+      <p>Connecting You to Care, Anytime,<br>Anywhere</p>
+      <p class="subtext">
+        From booking consultations to<br>
+        accessing reliable health info—your<br>
+        complete healthcare companion,<br>
+        online.
+      </p>
+      <div class="hero-buttons">
+        <button class="btn">Sign Up</button>
+        <button class="btn primary">Login</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const menuBtn = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuBtn.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

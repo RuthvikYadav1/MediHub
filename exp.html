@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medi-Link Hub</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="exp.css" />
+</head>
+<body>
+
+  <!-- ─────── Header ─────── -->
+  <header class="navbar">
+    <div class="logo">Medi-Link Hub</div>
+
+    <button class="menu-toggle" aria-label="Toggle navigation">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Aboutus2.html">About Us</a></li>
+      <li><a href="exp.html">Services</a></li>
+      <li><a href="Contact.html">Contact Us</a></li>
+    </ul>
+
+    <div class="auth-actions">
+      <button class="btn" onclick="window.location.href='#'">Sign Up</button>
+      <button class="btn primary" onclick="window.location.href='login.html'">Login</button>
+    </div>
+  </header>
+
+  <!-- ─────── Hero Section ─────── -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>
+        Connecting You to<br />
+        Better Healthcare
+      </h1>
+      <p>Find trusted doctors and book online appointments with ease</p>
+      <button class="cta-btn">Schedule an appointment</button>
+    </div>
+
+    <div class="hero-img">
+      <img src="/images/Doc.png" alt="Online Doctor Illustration" />
+    </div>
+  </section>
+
+  <!-- ─────── Feature Boxes ─────── -->
+  <section class="features">
+    <div class="feature-box">
+      <i class="fas fa-laptop-medical"></i>
+      <span>Online Appointments</span>
+    </div>
+
+    <div class="feature-box">
+      <i class="fas fa-user-md"></i>
+      <span>Specialist Doctors</span>
+    </div>
+
+    <div class="feature-box">
+      <i class="fas fa-heartbeat"></i>
+      <span>Health Information</span>
+    </div>
+  </section>
+
+  <!-- ─────── Script for Burger Menu ─────── -->
+  <script>
+    const menuBtn = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuBtn.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
