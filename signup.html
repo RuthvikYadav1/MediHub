@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home | Medi-Link Hub</title>
+  <link rel="stylesheet" href="signup.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ─────── Background Blobs ─────── -->
+  <svg class="bg-blobs" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="blobGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#a2eeff" />
+        <stop offset="100%" stop-color="#53b2fc" />
+      </linearGradient>
+    </defs>
+    <circle cx="150" cy="200" r="150" fill="url(#blobGradient)" opacity="0.2"/>
+    <circle cx="700" cy="100" r="100" fill="url(#blobGradient)" opacity="0.15"/>
+  </svg>
+
+  <!-- ─────── Navbar ─────── -->
+  <header class="navbar">
+    <div class="logo">Medi-Link Hub</div>
+
+    <button class="menu-toggle" aria-label="Toggle navigation">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Aboutus2.html">About Us</a></li>
+      <li><a href="exp.html">Services</a></li>
+      <li><a href="Contact.html">Contact Us</a></li>
+    </ul>
+
+    <div class="auth-actions">
+      <button class="btn" onclick="window.location.href='signup.html'">Sign Up</button>
+      <button class="btn primary" onclick="window.location.href='login.html'">Login</button>
+    </div>
+  </header>
+
+  <!-- ─────── Sign-Up Section ─────── -->
+  <section class="signup-section" id="signup-section">
+    <div class="signup-box">
+      <h2>Create an Account</h2>
+      <form>
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <input type="password" placeholder="Password" required />
+        <input type="password" placeholder="Confirm Password" required />
+        <button type="submit" class="btn primary">Sign Up</button>
+      </form>
+      <p class="login-link">Already have an account? <a href="login.html">Log in</a></p>
+    </div>
+  </section>
+
+  <script>
+    const menuBtn = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuBtn.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>
